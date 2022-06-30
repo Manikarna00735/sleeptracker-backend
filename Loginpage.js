@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const data = require("./DataBase")
 
+
+
+
+
 router.post("/data", (req,res)=>{
     const userDetail = req.body;
     let resp = false; 
@@ -13,6 +17,8 @@ router.post("/data", (req,res)=>{
     }
     res.send(resp);
 })
+
+
 
 
 module.exports = router;

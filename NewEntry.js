@@ -1,6 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const sleepdata = require("./SleepData");
+const client = require("./app");
+
+
+
+
 
 const toMinutes=(str)=>{
     var parts = str.split(":");
@@ -47,5 +52,21 @@ router.get(`/data`, (req,res)=>{
         res.send(temp[name]);
      }
 });
+
+router.get(`/sleep`,(req,res)=>{
+    //     const name = req.query.name;
+    //     client.query('select * from sleeptracker where username = mani', (err,result)=>{
+    //         if(!err){
+    //             console.log(result.rows);
+    //             console.log(name);
+    //             res.send(true);
+    //         }
+    //         else{
+    //             console.log(err);
+    //         }
+    //     });
+    // client.end();
+     res.send("welcome")
+    })
 
 module.exports = router;
